@@ -20,38 +20,44 @@ maskify(maskify); => returns ###kify
 maskify(''); => returns ''
 
 */
-
-maskify = (creditcard) => {
-    return (creditcard.slice(0, -4).replace(/./g, '#') + creditcard.slice(-4));
+// accepts  a value and #'s all but last four   
+const maskify = (creditCard) => {
+    //converts  variable to string
+    const creditCardString = `${creditCard}`;
+    const allButLastFour = creditCardString.slice(0, -4).replace(/./g, '#');
+    const lastFour = creditCardString.slice(-4);
+    return allButLastFour + lastFour;
 }
   
-maskify("123456789");
+maskify(maskify);
   
-  
-  
+// convert it from a number to string
+
+
   
 
 // 2. Write a function that would allow you to do this:
-var run = exercise('running');
+const run = exercise('running');
 console.log(run()); // prints "Today's exercise: running"
-var swim = exercise('swimming');
+const swim = exercise('swimming');
 console.log(swim()); // prints "Today's exercise: swimming"
+
+function
   
-function exercise () {
-    return(`Today's exercise: ${exercise()}`);
-}
+// function exercise (workout){ // define the function .... funtion + keyword (parameter)
+//     return function(){
+//       console.log(`Today's exercise: ${workout}`); // this is what i want the funtion to do
+//     }
+//   }
+//   //call the function
+//   const run = exercise('running')
+//   ;console.log(run()); // prints "Today's exercise: running"
+//   const swim = exercise('swimming');
+//   console.log(swim()); // prints "Today's exercise: swimming"
+  
+  
 
 
-
-  
-  
-// 3. Write a function that would allow you to do this:
-var sharePizza = cutPizzaSlices(8);
-console.log(sharePizza(2)); // prints "Each person gets 4.00 slices of pizza"
-console.log(sharePizza(3)); // prints "Each person gets 2.67 slices of pizza"
-  
-
-  
 // 4. - Data Security: Using your knowledge of scoping, create an object called 
 //       pii (Personally Identifiable Information) that cannot be accessed directly. 
 //       The object should have at least two properties: name and ssn.
@@ -69,12 +75,33 @@ console.log(sharePizza(3)); // prints "Each person gets 2.67 slices of pizza"
  //       shouldn't have access to their ssn.
   
   
-function pii(){
-    const name = "Toya";
-    let ssn = "123456789";
-    console.log(name);
+createUser () {
+    const pii = {
+        ssn: "123456789",
+        name: "Toya",
+    }
+    const external = {
+        name: pii.name,
+    } 
+    return external;
+
+    // const external = {
+    //     getName: function () {
+    //         return pii.name;
+    //     }
+    // }
+    // return external;
+
+    // const getName = function () {
+    //     return pii.name;
+    // };
+    // return {
+    //     getName: getName,
+    // }
 }
-  
-pii();
+
+const user = createUser();
+console.log(user.name);
+
   
   
