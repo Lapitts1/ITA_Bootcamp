@@ -8,16 +8,16 @@ console.log(sharePizza(3)); // prints "Each person gets 2.67 slices of pizza"
 
 
 
-// function cutPizzaSlices(pizza){ // define the funtion
-//     return person => { // what I want the function to do
-//       let eat = pizza / person;
-//         console.log("Each person gets " + `${eat}` + " slices of pizza");
-//     }
-//   }
-//   //call the function/ print out the results 
-//   var sharePizza = cutPizzaSlices(8);
-//   console.log(sharePizza(2)); // prints "Each person gets 4.00 slices of pizza"
-//   console.log(sharePizza(3)); // prints "Each person gets 2.67 slices of pizza"
+function cutPizzaSlices(pizza){ // define the funtion
+    return person => { // what I want the function to do
+      let eat = pizza / person;
+        console.log("Each person gets " + `${eat}` + " slices of pizza");
+    }
+  }
+  //call the function/ print out the results 
+  var sharePizza = cutPizzaSlices(8);
+  console.log(sharePizza(2)); // prints "Each person gets 4.00 slices of pizza"
+  console.log(sharePizza(3)); // prints "Each person gets 2.67 slices of pizza"
 
 
 
